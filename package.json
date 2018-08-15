@@ -1,0 +1,21 @@
+{
+  "name": "ruany-blog",
+  "version": "1.0.0",
+  "description": "ruany-blog",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev .",
+    "build": "vuepress build .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ryqsky/blog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ryqsky/blog/issues"
+  },
+  "homepage": "https://github.com/Ryqsky/blog#readme"
+}
