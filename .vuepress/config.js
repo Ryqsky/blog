@@ -12,12 +12,12 @@ module.exports = {
       },
       {
         text: '前端',
-        link: '/front-end/html-css'
+        link: '/front-end/javascript.html'
       },
-      {
-        text: '面试',
-        link: '/interview/'
-      },
+      // {
+      //   text: '面试',
+      //   link: '/interview/'
+      // },
       {
         text: '5分钟商学院',
         link: '/business/'
