@@ -43,8 +43,9 @@ module.exports = {
         //     'javascript'
         //   ]
         // },
-        'html-css',
-        'javascript'
+        // 'html-css',
+        'javascript',
+        'browser'
       ],
 
       '/interview/': [
