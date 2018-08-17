@@ -73,4 +73,14 @@
       - 在宽度和高度之外绘制元素的内边距和边框
     - border-box
       - 从已设定的宽度和高度分别减去边框和内边距才能得到内容的宽度和高度
+      
 
+## reflow / repaint
+
+`repaint` 主要是针对某一个DOM元素进行的重绘
+
+> 不涉及任何DOM元素的排版问题的变动为repaint，例如元素的color/text-align/text-decoration等等属性的变动。
+
+`reflow` 则是回流，针对整个页面的重排
+
+> 例如元素的任何涉及长、宽、行高、边框、display等style的修改。

@@ -65,6 +65,14 @@
 
   ![prototype](https://camo.githubusercontent.com/71cab2efcf6fb8401a2f0ef49443dd94bffc1373/68747470733a2f2f757365722d676f6c642d63646e2e786974752e696f2f323031382f332f31332f313632316538613962636230383732643f773d34383826683d35393026663d706e6726733d313531373232)
 
+  原型对象 `Prototypes` (instances)：每一个函数都有一个预设的 `prototype` 属性，这个属性会指向该函数的原型对象 `Prototypes` (instances)
+  
+  构造属性 `constuctor`：所有的原型对象都会有一个预设的 `constuctor` 属性，这个属性会指向其构造函数，例如 `Person.prototype.consuctor` 指向 `Person`
+  
+  原型链：当调用构造函数创建一个新的实例后，该实例的内如将包含一个指针（内部属性，隐式原型）`__proto__`，指向构造函数的原型对象。构造函数的原型对象也有自己的原型，直到每个对象的原型为 `null` 为止
+  
+
+  总结：
   - `Object` 是所有对象的爸爸，所有对象都可以通过 `__proto__` 找到它
   - `Function` 是所有函数的爸爸，所有函数都可以通过 `__proto__` 找到它
   - `Function.prototype` 和 `Object.prototype` 是两个特殊的对象，他们由引擎来创建
@@ -131,7 +139,29 @@
       return module.exports
   };
   ```
+
+### AMD
+
+  全称：Asynchromous Module Definition  
+  来源：是 `RequireJS` 推广过程中对模块定义的规范化产物  
+  特点：
+  - 异步加载模块
+  - 利用 `define` 方法定义模块
+  - 推崇前置，一般提前执行，也可延迟执行
   
+### CMD
+
+  来源：`SeaJS` 在推广过程中对模块定义的规范化产出
+  特点：
+  - 延迟执行
+  - 推崇就近
+  
+### UMD
+  
+  概念：是 `AMD` 和 `CommonJS` 的糅合  
+  特点：解决跨平台的解决方案
+  > UMD先判断是否支持Node.js的模块（exports）是否存在，存在则使用Node.js模块模式。  
+  再判断是否支持AMD（define是否存在），存在则使用AMD方式加载模块
   
 ## 防抖与节流
 
@@ -301,3 +331,13 @@
       };
     };
   ```
+  
+## call, apply, bind
+
+  - `call` 第一个参数是函数this要指向的对象，后续参数可一个一个传进去，函数会立即执行
+  - `apply` 若有第二个参数，必须以数组形式传参。函数会立刻执行
+  - `bind` 函数绑定this要指向的对象。函数不会立刻执行，而是返回新的函数，可用于预设参数
+  
+  ::: tip 共同点
+  都可以改变函数的this指向
+  :::
