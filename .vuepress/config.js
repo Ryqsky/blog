@@ -20,7 +20,7 @@ module.exports = {
       // },
       {
         text: '5分钟商学院',
-        link: '/business/'
+        link: '/business/oneself.html'
       }
     ],
     sidebar: {
@@ -53,7 +53,8 @@ module.exports = {
       ],
 
       '/business/': [
-        ''
+        '',
+        'oneself'
       ]
     }
   }
